@@ -4,12 +4,13 @@
 
 import 'dart:convert';
 
-DataModel dataModelFromJson(String str) => DataModel.fromJson(json.decode(str));
+BannerListDataModel dataModelFromJson(String str) =>
+    BannerListDataModel.fromJson(json.decode(str));
 
-String dataModelToJson(DataModel data) => json.encode(data.toJson());
+String dataModelToJson(BannerListDataModel data) => json.encode(data.toJson());
 
-class DataModel {
-  DataModel({
+class BannerListDataModel {
+  BannerListDataModel({
     this.fullName,
     this.designation,
     this.deliveryOnTime,
@@ -35,7 +36,8 @@ class DataModel {
   String? banner7;
   String? banner8;
 
-  factory DataModel.fromJson(Map<String, dynamic> json) => DataModel(
+  factory BannerListDataModel.fromJson(Map<String, dynamic> json) =>
+      BannerListDataModel(
         fullName: json["FullName"],
         designation: json["Designation"],
         deliveryOnTime: json["DeliveryOnTime"],

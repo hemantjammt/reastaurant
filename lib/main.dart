@@ -1,9 +1,8 @@
-import 'package:demo/Helper/ModelNotifier.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-
+import 'Helper/Notifier.dart';
 import 'View/HomePage.dart';
 
 void main() {
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (_) => ModelNotifier(),
+      create: (_) => Notifier(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: "BannerList",
